@@ -43,12 +43,12 @@ func getSS() {
 				s.password = text
 			}
 			if i == 4 {
-				s.security = text
+				s.method = text
 			}
 		})
 		fmt.Println(s)
 
-		store(s)
+		store(&s)
 	})
 
 	c.OnRequest(func(r *colly.Request) {
